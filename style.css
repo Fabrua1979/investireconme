@@ -1,30 +1,86 @@
-:root{--primary:#0a2540;--accent:#ffb703;--grey:#f7f9fc;--text:#222;--maxW:1100px}
-*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Arial,sans-serif}
-html{scroll-behavior:smooth}
-body{color:var(--text)}
-section{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
-section .bg{position:absolute;top:0;left:0;width:100%;height:100%;background-size:cover;background-position:center;z-index:-2}
-section .bg::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.55)}
-section .content{position:relative;z-index:1;color:#fff;text-align:center;padding:2rem;max-width:var(--maxW);margin:auto}
-h1{font-size:clamp(2.8rem,6vw,4.5rem);letter-spacing:-.5px}
-h2{font-size:clamp(1.8rem,4vw,3rem);margin-bottom:1rem}
-p{font-size:1.25rem;line-height:1.4}
-.btn{display:inline-block;background:var(--accent);color:var(--primary);padding:.85rem 2rem;border-radius:30px;font-weight:700;text-decoration:none;margin-top:1.2rem;transition:.3s;box-shadow:0 4px 14px rgba(0,0,0,.25)}
-.btn:hover{transform:scale(1.05)}
-.grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
-.card{background:rgba(255,255,255,.9);color:var(--text);padding:2rem;border-radius:12px;box-shadow:0 4px 18px rgba(0,0,0,.15)}
-.counter{font-size:5rem;font-weight:700;color:var(--accent)}
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Segoe UI", sans-serif; line-height: 1.6; color: #333; }
 
-/* reveal anim */
-.reveal{opacity:0;transform:translateY(60px);transition:all .8s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-.delay-1{transition-delay:.2s}
-.delay-2{transition-delay:.4s}
-
-/* mobile */
-@media(max-width:700px){
-  section{min-height:80vh}
-  h1{font-size:2.2rem}
-  p{font-size:1rem}
-  .counter{font-size:3.5rem}
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,.1);
+  z-index: 1000;
 }
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 5%;
+}
+.logo { height: 40px; }
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { text-decoration: none; color: #0d1b2a; font-weight: 600; }
+
+/* Hero */
+.hero {
+  background: url(../images/hero-financial-growth.jpg) center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 140px 20px 80px;
+}
+.hero h1 { font-size: 2.8rem; margin-bottom: 10px; }
+.hero h2 { font-size: 1.5rem; margin-bottom: 15px; }
+.hero p { max-width: 600px; margin: 0 auto 30px; }
+.stats { display: flex; justify-content: center; gap: 40px; margin-bottom: 30px; }
+.cta {
+  background: #ff7b00;
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Sezioni */
+.section { padding: 80px 5%; background: #fff; }
+.section:nth-child(even) { background: #f9f9f9; }
+.container { max-width: 1000px; margin: auto; }
+.section h2 { text-align: center; margin-bottom: 40px; font-size: 2.2rem; }
+.section img { width: 100%; margin-bottom: 30px; border-radius: 8px; }
+
+/* Form */
+.contact form {
+  display: grid;
+  gap: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+.contact input,
+.contact textarea {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.contact button {
+  background: #0d1b2a;
+  color: #fff;
+  border: none;
+  padding: 16px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.contact button:hover { background: #ff7b00; }
+
+/* Footer */
+footer { background: #0d1b2a; text-align: center; padding: 30px 5%; }
+footer img { width: 100%; max-width: 300px; margin-bottom: 10px; }
+footer p { color: #ccc; font-size: .9rem; }
+
+/* Animazioni */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { opacity: 0; animation: fadeUp .8s ease-out forwards; }
