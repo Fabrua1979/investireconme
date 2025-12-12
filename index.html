@@ -2,61 +2,87 @@
 <html lang="it">
 <head>
   <meta charset="utf-8">
-  <title>Investire con Me – Corso di Formazione Finanziaria</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <title>Investire con ME</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- HERO -->
-  <section id="hero">
-    <div class="bg" style="background-image:url('assets/img/locandina-esterna.png')"></div>
-    <div class="content">
-      <h1 class="reveal">Investire con Me</h1>
-      <p class="reveal delay-1">Il tuo partner di fiducia per il successo finanziario</p>
-      <a href="#perche" class="btn reveal delay-2">Scopri di più</a>
-    </div>
-  </section>
 
-  <!-- PERCHÉ -->
-  <section id="perche">
-    <div class="bg" style="background-image:url('assets/img/inflation-impact.jpg')"></div>
-    <div class="content">
-      <h2 class="reveal">Perché investire?</h2>
-      <p class="reveal">Dal 2002 ad oggi i tuoi € 100 hanno perso quasi il <span class="counter" data-target="40">0</span>% del loro valore reale.</p>
-    </div>
-  </section>
+<nav class="navbar">
+  <div class="container">
+    <img src="images/trust-values.jpg" alt="Logo" class="logo">
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#perche">Perché</a></li>
+      <li><a href="#imparerai">Imparerai</a></li>
+      <li><a href="#offriamo">Offriamo</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+    </ul>
+  </div>
+</nav>
 
-  <!-- COSA IMPARERAI -->
-  <section id="imparerai">
-    <div class="bg" style="background-image:url('assets/img/locandina-interna.png')"></div>
-    <div class="content">
-      <h2 class="reveal">Cosa imparerai</h2>
-      <div class="grid">
-        <div class="card reveal">Analizzare il tuo stato patrimoniale</div>
-        <div class="card reveal">Creare un portafoglio ETF/PAC</div>
-        <div class="card reveal">Generare una rendita extra</div>
-      </div>
+<section id="home" class="hero">
+  <div class="container">
+    <h1>Investire con ME</h1>
+    <h2>Sei pronto a prendere il controllo del tuo futuro finanziario?</h2>
+    <p>Corso pratico sugli ETF per dipendenti aziendali.</p>
+    <div class="stats">
+      <div><strong>250+</strong> Clienti</div>
+      <div><strong>10</strong> Locations</div>
+      <div><strong>8h</strong> Durata</div>
     </div>
-  </section>
+    <a href="#contatti" class="cta">Richiedi Info</a>
+  </div>
+</section>
 
-  <!-- STRUMENTI -->
-  <section id="strumenti">
-    <div class="bg" style="background-image:url('assets/img/etf-learning.jpg')"></div>
-    <div class="content">
-      <h2 class="reveal">Gli strumenti</h2>
-      <p class="reveal">ETF, PAC, ordini condizionati: impariamo a usarli concretamente.</p>
-    </div>
-  </section>
+<section id="perche" class="section">
+  <div class="container">
+    <h2>Perché Investire con ME?</h2>
+    <img src="images/inflation-impact.jpg" alt="Inflazione">
+    <img src="images/etf-learning.jpg" alt="Soluzione">
+    <img src="images/financial-tools.jpg" alt="Risultato">
+  </div>
+</section>
 
-  <!-- CONTATTI / CTA -->
-  <section id="cta">
-    <div class="bg" style="background-image:url('assets/img/contact-consultation.jpg')"></div>
-    <div class="content">
-      <h2 class="reveal">Posti limitati</h2>
-      <a href="mailto:investireconme@gmail.com" class="btn reveal">Richiedi il tuo posto</a>
-    </div>
-  </section>
+<section id="imparerai" class="section">
+  <div class="container">
+    <h2>Cosa Imparerai</h2>
+    <img src="images/etf-learning.jpg" alt="Portfolio 10%">
+    <img src="images/financial-tools.jpg" alt="Strumenti ETF">
+  </div>
+</section>
 
-  <script src="main.js"></script>
+<section id="offriamo" class="section">
+  <div class="container">
+    <h2>Cosa Offriamo</h2>
+    <img src="images/contact-consultation.jpg" alt="Fogli di calcolo">
+    <img src="images/trust-values.jpg" alt="Attestato">
+    <img src="images/hero-financial-growth.jpg" alt="Strumenti professionali">
+  </div>
+</section>
+
+<section id="contatti" class="section contact">
+  <div class="container">
+    <h2>Contattaci</h2>
+    <form action="https://formspree.io/f/xovazzlz" method="POST">
+      <input type="text" name="nome" placeholder="Nome e Cognome *" required>
+      <input type="email" name="email" placeholder="Email *" required>
+      <input type="text" name="azienda" placeholder="Azienda">
+      <textarea name="messaggio" placeholder="Messaggio *" required></textarea>
+      <button type="submit">Invia Richiesta</button>
+    </form>
+    <p>Email: investireconme@gmail.com | Tel: +39 123 456 7890</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <img src="images/trust-values.jpg" alt="Footer">
+    <p>© 2025 AR Consulting – Questo corso ha finalità formative. Non garantiamo guadagni sicuri.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
+
